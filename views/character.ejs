@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Star Wars API by Grow (Node-Express-EJS)</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="/css/base.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container"><br /><br />
+      <div class="row">
+        <div class="col-sm-3 col-md-3">
+          <img src="/images/star_wars_logo.png"
+            alt="" class="img-rounded img-responsive" />
+        </div>
+        <div class="col-sm-9 col-md-9">
+          <%if (body.name) { %>
+            <blockquote>
+              <p><%- body.name %></p> <small><cite title="Source Title"><%- body.homeworld %>  <i class="glyphicon glyphicon-globe"></i></cite></small>
+            </blockquote>
+            <p> 
+              <b>Height</b> <%- body.height %>
+              <br /> 
+              <b>Mass</b> <%- body.mass %>
+              <br /> 
+              <b>Hair Color</b> <%- body.hair_color %>
+              <br /> 
+              <b>Skin Color</b> <%- body.skin_color %>
+              <br /> 
+              <b>Eye Color</b> <%- body.eye_color %>
+              <br /> 
+              <b>Birth Year</b> <%- body.birth_year %>
+              <br />
+              <b>Gender</b> <%- body.gender %>
+              <br />
+              <b>Films</b> <%- body.films %>
+              <br />
+              <b>Species</b> <%- body.species %>
+              <br />
+              <b>Vehicles</b> <%- body.vehicles %>
+              <br />
+              <b>Starships</b> <%- body.starships %>
+              <br />
+            </p>
+          <% }else{ %>
+            <blockquote>
+              <br/><br/>Character not found
+            </blockquote>
+          <% } %>
+        </div>
+      </div>
+    </div>
+    <script src="/js/jquery-1.11.3.min.js"></script>
+    <!-- Bootstrap latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  </body>
+</html>
