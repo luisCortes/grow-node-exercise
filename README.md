@@ -1,6 +1,17 @@
 # node-exercise
 A little exercise using a Star Wars API [https://swapi.co/](https://swapi.co/)
 
+## Install
+
+* Clone this repository into a specific folder
+* cd into the folder
+* Run
+```sh
+$ npm install
+$ node server.js
+```
+* Open browser and go to http://localhost:8081/
+
 ## Goal
 Make a small express server with endpoints centered around Star Wars. 
 This will hopefully demonstrate to us abilities to make an express app, consume data from an API, and manipulate that data into some desired way
@@ -16,6 +27,3 @@ This will hopefully demonstrate to us abilities to make an express app, consume 
     and the potential sort parameters will be 1 of the following, ['name', 'mass', 'height']  So the endpoint '/characters?sort=height' should return JSON of 50 characters sorted by their height. 
 * '/planetresidents' - Return raw JSON in the form {planetName1: [characterName1, characterName2], planetName2: [characterName3]}. 
     So it is an object where the keys are the planet names, and the values are lists of residents names for that planet
-
-## Author
-Luis Angel Cortes
